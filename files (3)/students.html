@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>SMART HRD | 교육생 명부</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">HRD</div>
+      <div><div class="brand-name">SMART HRD</div><div class="brand-sub">출결랭싱 동일포털</div></div>
+    </div>
+    <div class="nav-label">교육과정 관리</div>
+    <nav class="nav">
+      <a class="nav-item" href="index.html" data-page="index.html"><span>▦ 대시보드 홈</span></a>
+      <a class="nav-item" href="attendance.html" data-page="attendance.html"><span>☑ 출결 현황 모니터링</span></a>
+      <a class="nav-item" href="documents.html" data-page="documents.html"><span>☑ 증빙서류 검토/승인</span><span class="nav-badge">3</span></a>
+      <a class="nav-item" href="completion.html" data-page="completion.html"><span>☑ 수료/장려금 시뮬레이션</span></a>
+      <a class="nav-item" href="students.html" data-page="students.html"><span>▤ 교육생 명부</span></a>
+      <a class="nav-item" href="settings.html" data-page="settings.html"><span>⚙ 규정 및 시스템 설정</span></a>
+    </nav>
+    <div class="sidebar-footer">행정 가이드라인<br>HRD-Net 연동 지침</div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="course-select">빅데이터 기반 AI 전문가 과정 4기 ▾</div>
+      <div class="room-tag"><span class="dot"></span>강의실: 제1스마트융합실</div>
+      <div class="topbar-right">
+        <button class="icon-btn" data-label="알림">🔔<span class="dot"></span></button>
+        <div class="profile">
+          <div class="profile-avatar">김</div>
+          <div><div class="profile-name">김담임 매니저</div><div class="profile-role">운영/담임 교강사</div></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="page-header">
+        <div>
+          <div class="page-title">교육생 명부</div>
+          <div class="page-sub">전체 교육생 기본 정보와 출석률을 확인합니다.</div>
+        </div>
+        <button class="btn btn-outline">+ 교육생 추가</button>
+      </div>
+
+      <div class="card card-pad">
+        <table class="roster">
+          <thead>
+            <tr><th>이름</th><th>담당 파트</th><th>연락처</th><th>누적 출석률</th><th>상태</th><th></th></tr>
+          </thead>
+          <tbody>
+            <tr><td><div class="trainee-cell"><div class="trainee-avatar">강</div><div class="trainee-name">강민준</div></div></td><td>AI 모델링</td><td>010-1234-5678</td><td>98.5%</td><td><span class="badge badge-green">정상</span></td><td><button class="row-action">상세</button></td></tr>
+            <tr><td><div class="trainee-cell"><div class="trainee-avatar">박</div><div class="trainee-name">박시현</div></div></td><td>관리 대상</td><td>010-2345-6789</td><td>79.2%</td><td><span class="badge badge-amber">관리 필요</span></td><td><button class="row-action">상세</button></td></tr>
+            <tr><td><div class="trainee-cell"><div class="trainee-avatar">김</div><div class="trainee-name">김스마트</div></div></td><td>자연어처리</td><td>010-3456-7890</td><td>94.1%</td><td><span class="badge badge-green">정상</span></td><td><button class="row-action">상세</button></td></tr>
+            <tr><td><div class="trainee-cell"><div class="trainee-avatar">정</div><div class="trainee-name">정재우</div></div></td><td>수료위험군</td><td>010-4567-8901</td><td>78.8%</td><td><span class="badge badge-red">위험</span></td><td><button class="row-action">상세</button></td></tr>
+            <tr><td><div class="trainee-cell"><div class="trainee-avatar">이</div><div class="trainee-name">이데이터</div></div></td><td>빅데이터 엔지니어링</td><td>010-5678-9012</td><td>96.3%</td><td><span class="badge badge-green">정상</span></td><td><button class="row-action">상세</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

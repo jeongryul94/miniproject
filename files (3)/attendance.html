@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>SMART HRD | 출결 현황 모니터링</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">HRD</div>
+      <div>
+        <div class="brand-name">SMART HRD</div>
+        <div class="brand-sub">출결랭싱 동일포털</div>
+      </div>
+    </div>
+    <div class="nav-label">교육과정 관리</div>
+    <nav class="nav">
+      <a class="nav-item" href="index.html" data-page="index.html"><span>▦ 대시보드 홈</span></a>
+      <a class="nav-item" href="attendance.html" data-page="attendance.html"><span>☑ 출결 현황 모니터링</span></a>
+      <a class="nav-item" href="documents.html" data-page="documents.html"><span>☑ 증빙서류 검토/승인</span><span class="nav-badge">3</span></a>
+      <a class="nav-item" href="completion.html" data-page="completion.html"><span>☑ 수료/장려금 시뮬레이션</span></a>
+      <a class="nav-item" href="students.html" data-page="students.html"><span>▤ 교육생 명부</span></a>
+      <a class="nav-item" href="settings.html" data-page="settings.html"><span>⚙ 규정 및 시스템 설정</span></a>
+    </nav>
+    <div class="sidebar-footer">행정 가이드라인<br>HRD-Net 연동 지침</div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="course-select">빅데이터 기반 AI 전문가 과정 4기 ▾</div>
+      <div class="room-tag"><span class="dot"></span>강의실: 제1스마트융합실</div>
+      <div class="topbar-right">
+        <button class="icon-btn" data-label="알림">🔔<span class="dot"></span></button>
+        <button class="icon-btn" data-label="메시지">✉</button>
+        <div class="profile">
+          <div class="profile-avatar">김</div>
+          <div><div class="profile-name">김담임 매니저</div><div class="profile-role">운영/담임 교강사</div></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="page-header">
+        <div>
+          <div class="page-title">출결 현황 모니터링</div>
+          <div class="page-sub">일자별 출결 기록을 확인하고 이상 항목을 관리합니다.</div>
+        </div>
+        <button class="btn btn-primary">⬇ 출결 리포트 다운로드</button>
+      </div>
+
+      <div class="filter-bar">
+        <span class="chip active">전체 28명</span>
+        <span class="chip">정상 24</span>
+        <span class="chip">지각 2</span>
+        <span class="chip">결석 1</span>
+        <span class="chip">공결 1</span>
+      </div>
+
+      <div class="card card-pad">
+        <table class="roster">
+          <thead>
+            <tr>
+              <th>훈련생 정보</th>
+              <th>입실 시간</th>
+              <th>퇴실 시간</th>
+              <th>금일 상태</th>
+              <th>누적 출석률</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="normal">
+              <td><div class="trainee-cell"><div class="trainee-avatar">강</div><div><div class="trainee-name">강민준</div><div class="trainee-track">AI 모델링 파트</div></div></div></td>
+              <td>08:48:12</td>
+              <td>18:02:10</td>
+              <td><span class="status-pill status-normal">정상 입실</span></td>
+              <td>98.5%</td>
+              <td><button class="row-action">상세</button></td>
+            </tr>
+            <tr data-status="late">
+              <td><div class="trainee-cell"><div class="trainee-avatar">박</div><div><div class="trainee-name">박시현</div><div class="trainee-track">관리 대상자</div></div></div></td>
+              <td>09:18:04</td>
+              <td>18:05:44</td>
+              <td><span class="status-pill status-late">지각 (18분)</span></td>
+              <td>79.2%</td>
+              <td><button class="row-action">상세</button></td>
+            </tr>
+            <tr data-status="normal">
+              <td><div class="trainee-cell"><div class="trainee-avatar">김</div><div><div class="trainee-name">김스마트</div><div class="trainee-track">자연어처리 파트</div></div></div></td>
+              <td>-</td>
+              <td>-</td>
+              <td><span class="status-pill status-late">병원진료 공결 대기</span></td>
+              <td>94.1%</td>
+              <td><button class="row-action">상세</button></td>
+            </tr>
+            <tr data-status="absent">
+              <td><div class="trainee-cell"><div class="trainee-avatar">정</div><div><div class="trainee-name">정재우</div><div class="trainee-track">수료위험군</div></div></div></td>
+              <td>미입실</td>
+              <td>-</td>
+              <td><span class="status-pill status-absent">결석 처리 중</span></td>
+              <td>78.8%</td>
+              <td><button class="row-action">상세</button></td>
+            </tr>
+            <tr data-status="normal">
+              <td><div class="trainee-cell"><div class="trainee-avatar">이</div><div><div class="trainee-name">이데이터</div><div class="trainee-track">빅데이터 엔지니어링</div></div></div></td>
+              <td>08:52:40</td>
+              <td>18:01:02</td>
+              <td><span class="status-pill status-normal">정상 입실</span></td>
+              <td>96.3%</td>
+              <td><button class="row-action">상세</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>SMART HRD | 대시보드 홈</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- ===== 사이드바 ===== -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">HRD</div>
+      <div>
+        <div class="brand-name">SMART HRD</div>
+        <div class="brand-sub">출결랭싱 동일포털</div>
+      </div>
+    </div>
+
+    <div class="nav-label">교육과정 관리</div>
+    <nav class="nav">
+      <a class="nav-item" href="index.html" data-page="index.html"><span><span class="icon">▦</span>대시보드 홈</span></a>
+      <a class="nav-item" href="attendance.html" data-page="attendance.html"><span><span class="icon">☑</span>출결 현황 모니터링</span></a>
+      <a class="nav-item" href="documents.html" data-page="documents.html"><span><span class="icon">☑</span>증빙서류 검토/승인</span><span class="nav-badge">3</span></a>
+      <a class="nav-item" href="completion.html" data-page="completion.html"><span><span class="icon">☑</span>수료/장려금 시뮬레이션</span></a>
+      <a class="nav-item" href="students.html" data-page="students.html"><span><span class="icon">▤</span>교육생 명부</span></a>
+      <a class="nav-item" href="settings.html" data-page="settings.html"><span><span class="icon">⚙</span>규정 및 시스템 설정</span></a>
+    </nav>
+
+    <div class="sidebar-footer">
+      행정 가이드라인<br>HRD-Net 연동 지침
+    </div>
+  </aside>
+
+  <!-- ===== 메인 영역 ===== -->
+  <div class="main">
+
+    <!-- 상단바 -->
+    <header class="topbar">
+      <div class="course-select">빅데이터 기반 AI 전문가 과정 4기 ▾</div>
+      <div class="room-tag"><span class="dot"></span>강의실: 제1스마트융합실</div>
+      <div class="topbar-right">
+        <button class="icon-btn" data-label="알림">🔔<span class="dot"></span></button>
+        <button class="icon-btn" data-label="메시지">✉</button>
+        <div class="profile">
+          <div class="profile-avatar">김</div>
+          <div>
+            <div class="profile-name">김담임 매니저</div>
+            <div class="profile-role">운영/담임 교강사</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- 과정 정보 배너 -->
+      <div class="card course-banner">
+        <div class="course-banner-left">
+          <div class="date-line">📅 2025년 5월 16일 금요일 (실시간 출결 모니터링) &nbsp; <span class="live-tag">● 비콘 실시간 동기화 중</span></div>
+          <h1>빅데이터 기반 AI 전문가 과정 4기 <span class="day">82일차</span> / 총 120일 (진도율 68.3%)</h1>
+        </div>
+        <div class="course-banner-mid">
+          <div class="metric-mini">
+            <div class="num">28명</div>
+            <div class="label">재직 인원</div>
+          </div>
+          <div class="metric-mini">
+            <div class="num">95.0%</div>
+            <div class="label">목표 수료율</div>
+          </div>
+        </div>
+        <button class="btn btn-primary">⬇ HRD-Net 일일보고 생성</button>
+      </div>
+
+      <!-- 4개 요약 카드 -->
+      <div class="stat-grid">
+        <div class="card stat-card">
+          <div class="stat-top">오늘 입실 현황 <span class="stat-icon">👤</span></div>
+          <div class="stat-value">24 <span class="unit">/ 28명</span> <span style="margin-left:auto;color:var(--green);font-size:13px;">85.7%</span></div>
+          <div class="progress-track"><div class="progress-fill" style="width:85.7%;"></div></div>
+          <div class="stat-foot"><span>● 지각 2</span><span>● 결석 1</span><span>● 공결 1</span></div>
+        </div>
+
+        <div class="card stat-card">
+          <div class="stat-top">즉시 검토 필요 서류 <span class="stat-icon">📋</span></div>
+          <div class="stat-value">3 <span class="unit">건 대기 중</span> <span class="badge badge-red" style="margin-left:auto;">처리 필요</span></div>
+          <div class="stat-foot">진료확인서, 예비군훈련필증 등</div>
+          <div class="stat-foot" style="margin-top:4px;">규정상 3일 이내 승인 · <span class="badge badge-amber">1건 당일 마감</span></div>
+        </div>
+
+        <div class="card stat-card">
+          <div class="stat-top">수료 위험군 (출석률 &lt; 80%) <span class="stat-icon">⚠</span></div>
+          <div class="stat-value">2 <span class="unit">명</span> <span class="badge badge-red" style="margin-left:auto;">집중 케어</span></div>
+          <div class="stat-foot">정재우 · 결석 허용일 2.5일 잔여</div>
+          <div class="stat-foot" style="margin-top:4px;">담임 매니저 1:1 면담 권고 ›</div>
+        </div>
+
+        <div class="card stat-card">
+          <div class="stat-top">AI 챗봇 자동상담 건수 <span class="stat-icon">🤖</span></div>
+          <div class="stat-value">14 <span class="unit">건 처리</span> <span class="badge badge-blue" style="margin-left:auto;">행정업무 78% 절감</span></div>
+          <div class="stat-foot">사전 사유서 접수 안내 · 4건 접수</div>
+          <div class="stat-foot" style="margin-top:4px;">HRD-Net 비콘 오류 문의 6건 해결</div>
+        </div>
+      </div>
+
+      <!-- 메인 2단 레이아웃 -->
+      <div class="main-grid">
+
+        <!-- 왼쪽: 실시간 테이블 + 타임라인 -->
+        <div class="section-stack">
+          <div class="card card-pad">
+            <div class="page-header" style="margin-bottom:0;">
+              <div class="card-title">실시간 출결 모니터링 및 이상자 명부 <span style="color:var(--text-faint);font-weight:400;font-size:12px;">총 28명</span></div>
+              <div class="table-tabs">
+                <button class="table-tab active" data-filter="all">전체 (28)</button>
+                <button class="table-tab" data-filter="issue">결석·지각만 (3)</button>
+                <button class="table-tab" data-filter="nodoc">서류 미제출 (4)</button>
+              </div>
+            </div>
+
+            <table class="roster">
+              <thead>
+                <tr>
+                  <th>훈련생 정보</th>
+                  <th>입실 시간 (인증)</th>
+                  <th>금일 상태</th>
+                  <th>누적 출석률</th>
+                  <th>서류 접수</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-status="normal" data-nodoc="false">
+                  <td><div class="trainee-cell"><div class="trainee-avatar">강</div><div><div class="trainee-name">강민준</div><div class="trainee-track">AI 모델링 파트</div></div></div></td>
+                  <td>📶 08:48:12 <br><span class="trainee-track">비콘</span></td>
+                  <td><span class="status-pill status-normal">정상 입실</span></td>
+                  <td><div class="mini-progress"><span>98.5%</span><div class="track"><div class="fill" style="width:98.5%;background:var(--blue-600);"></div></div></div></td>
+                  <td>-</td>
+                  <td><button class="row-action">상세</button></td>
+                </tr>
+                <tr data-status="late" data-nodoc="true">
+                  <td><div class="trainee-cell"><div class="trainee-avatar">박</div><div><div class="trainee-name">박시현</div><div class="trainee-track">관리 대상자</div></div></div></td>
+                  <td>📶 09:18:04 <br><span class="trainee-track">QR</span></td>
+                  <td><span class="status-pill status-late">지각 (18분 초과)</span></td>
+                  <td><div class="mini-progress"><span>79.2%</span><div class="track"><div class="fill" style="width:79.2%;background:var(--amber);"></div></div></div></td>
+                  <td>사유서 미작성</td>
+                  <td><button class="row-action">상세</button></td>
+                </tr>
+                <tr data-status="pending" data-nodoc="false">
+                  <td><div class="trainee-cell"><div class="trainee-avatar">김</div><div><div class="trainee-name">김스마트</div><div class="trainee-track">자연어처리 파트</div></div></div></td>
+                  <td>- <br><span class="trainee-track">사전문진 신청</span></td>
+                  <td><span class="status-pill status-late">병원진료 공결 대기</span></td>
+                  <td><div class="mini-progress"><span>94.1%</span><div class="track"><div class="fill" style="width:94.1%;background:var(--blue-600);"></div></div></div></td>
+                  <td>영수증 첨부됨</td>
+                  <td><button class="row-action">상세</button></td>
+                </tr>
+                <tr data-status="absent" data-nodoc="true">
+                  <td><div class="trainee-cell"><div class="trainee-avatar">정</div><div><div class="trainee-name">정재우</div><div class="trainee-track">수료위험군 (78.8%)</div></div></div></td>
+                  <td>미입실 <br><span class="trainee-track">무단 추정</span></td>
+                  <td><span class="status-pill status-absent">당일 결석 처리 중</span></td>
+                  <td><div class="mini-progress"><span>78.8%</span><div class="track"><div class="fill" style="width:78.8%;background:var(--red);"></div></div></div></td>
+                  <td>사유 미입력</td>
+                  <td><button class="row-action">상세</button></td>
+                </tr>
+                <tr data-status="normal" data-nodoc="false">
+                  <td><div class="trainee-cell"><div class="trainee-avatar">이</div><div><div class="trainee-name">이데이터</div><div class="trainee-track">빅데이터 엔지니어링</div></div></div></td>
+                  <td>📶 08:52:40 <br><span class="trainee-track">비콘</span></td>
+                  <td><span class="status-pill status-normal">정상 입실</span></td>
+                  <td><div class="mini-progress"><span>96.3%</span><div class="track"><div class="fill" style="width:96.3%;background:var(--blue-600);"></div></div></div></td>
+                  <td>면접확인서 승인</td>
+                  <td><button class="row-action">상세</button></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="table-footer">
+              <span>🔄 최종 고용노동부 HRD-Net 동기화: 09:30:15 (자동 10분 주기)</span>
+              <div class="pager"><button class="active">1</button><button>2</button><button>3</button></div>
+            </div>
+          </div>
+
+          <div class="card card-pad">
+            <div class="card-title">🕐 이상 출결 및 처리 실시간 타임라인 <span style="margin-left:auto;color:var(--text-faint);font-weight:400;font-size:12px;">오늘 기록 7건</span></div>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot dot-amber"></div>
+                <div class="timeline-text">
+                  <div class="title">박시현 훈련생 09:18 QR 체크인 (지각 18분 기록)</div>
+                  <div class="desc">사전 사유: 지하철 1호선 연착 안내문, AI 챗봇 제출 완료 (서류 자동 매핑 대기)</div>
+                </div>
+                <div class="timeline-time">09:18</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot dot-blue"></div>
+                <div class="timeline-text">
+                  <div class="title">김스마트 훈련생 [병원진료확인서] 공결 신청 승인요청 접수</div>
+                  <div class="desc">전남대학교병원 외래진료증 업로드됨 (첨부용량 1.4MB)</div>
+                </div>
+                <div class="timeline-time">09:05</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot dot-red"></div>
+                <div class="timeline-text">
+                  <div class="title">정재우 훈련생 09:00 기준 미입실 - 출석 위험 임계 도달 알림</div>
+                  <div class="desc">담당 담임 매니저(김담임) SMS 알림 및 즉시연락 가이드 트리거</div>
+                </div>
+                <div class="timeline-time">09:01</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 오른쪽: 증빙서류 접수 + 출석률 추이 + 안내 -->
+        <div class="section-stack">
+          <div class="card card-pad">
+            <div class="card-title">📄 오늘의 증빙서류 접수 <span class="badge badge-red" style="margin-left:auto;">3건 대기</span></div>
+
+            <div class="doc-item">
+              <div class="doc-item-top"><span class="doc-name">김스마트</span><span class="badge badge-blue">병원진료 공결</span><span class="badge badge-amber" style="margin-left:auto;">당일 처리 권장</span></div>
+              <div class="doc-desc">진료확인서 (전남대병원 외래진료증) · <a href="#">미리보기</a></div>
+              <div class="doc-actions">
+                <button class="btn btn-primary btn-sm doc-approve">승인 (공결 인정)</button>
+                <button class="btn btn-outline btn-sm doc-reject">보완 요청</button>
+              </div>
+            </div>
+
+            <div class="doc-item">
+              <div class="doc-item-top"><span class="doc-name">박인재</span><span class="badge badge-amber">예비군 훈련</span><span class="badge badge-red doc-status" style="margin-left:auto;">D-2 접수</span></div>
+              <div class="doc-desc">소집필증 및 훈련참가확인서 · <a href="#">미리보기</a></div>
+              <div class="doc-actions">
+                <button class="btn btn-primary btn-sm doc-approve">승인 (공결 인정)</button>
+                <button class="btn btn-outline btn-sm doc-reject">상세 확인</button>
+              </div>
+            </div>
+
+            <div class="doc-item">
+              <div class="doc-item-top"><span class="doc-name">이데이터</span><span class="badge badge-blue">취업 면접</span><span class="badge badge-green doc-status" style="margin-left:auto;">승인 완료</span></div>
+              <div class="doc-desc">채용 면접 확인서 (네이버) · 김담임 매니저 승인</div>
+            </div>
+
+            <button class="btn btn-outline btn-sm" style="width:100%;margin-top:12px;">전체 증빙서류 보관함 열기 (24건)</button>
+          </div>
+
+          <div class="card card-pad">
+            <div class="card-title">📈 출석률 추이 및 장려금 예측 <span class="badge badge-blue" style="margin-left:auto;">8회차 단위</span></div>
+            <div class="sparkline-wrap">
+              <div style="display:flex;justify-content:space-between;align-items:baseline;">
+                <span style="font-size:12px;color:var(--text-sub);">최근 5주 출석률 추이</span>
+                <span style="font-size:12px;color:var(--green);font-weight:700;">평균 94.6%</span>
+              </div>
+              <svg viewBox="0 0 300 80" width="100%" height="80" style="margin-top:8px;">
+                <polyline fill="none" stroke="#4f63e8" stroke-width="2.5"
+                  points="10,55 75,48 140,50 205,30 270,15" />
+                <circle cx="10" cy="55" r="3" fill="#4f63e8" />
+                <circle cx="75" cy="48" r="3" fill="#4f63e8" />
+                <circle cx="140" cy="50" r="3" fill="#4f63e8" />
+                <circle cx="205" cy="30" r="3" fill="#4f63e8" />
+                <circle cx="270" cy="15" r="4" fill="#4f63e8" />
+              </svg>
+              <div class="sparkline-labels">
+                <span>4월 3주</span><span>4월 4주</span><span>5월 1주</span><span>5월 2주</span><span>이번주 (5주)</span>
+              </div>
+            </div>
+
+            <div style="margin-top:18px;">
+              <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:600;">
+                <span>훈련장려금 100% 지급 충족률</span><span style="color:var(--blue-700);">92.8%</span>
+              </div>
+              <div class="progress-track" style="margin-top:8px;"><div class="progress-fill" style="width:92.8%;"></div></div>
+              <div class="stat-foot" style="margin-top:6px;">출석률 80% 이상 충족 교육생 · 적격 인원 26 / 28명 · 부적격 위기 2명</div>
+            </div>
+          </div>
+
+          <div class="card card-pad notice-card">
+            <div class="card-title" style="color:var(--blue-700);">ⓘ 고용노동부 출결 지침 안내</div>
+            <p>단위기간(30일) 만료 3일 전까지 모든 증빙서류의 승인이 완료되어야 지연 없이 훈련장려금이 산정·지급됩니다.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>SMART HRD | 수료/장려금 시뮬레이션</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">HRD</div>
+      <div><div class="brand-name">SMART HRD</div><div class="brand-sub">출결랭싱 동일포털</div></div>
+    </div>
+    <div class="nav-label">교육과정 관리</div>
+    <nav class="nav">
+      <a class="nav-item" href="index.html" data-page="index.html"><span>▦ 대시보드 홈</span></a>
+      <a class="nav-item" href="attendance.html" data-page="attendance.html"><span>☑ 출결 현황 모니터링</span></a>
+      <a class="nav-item" href="documents.html" data-page="documents.html"><span>☑ 증빙서류 검토/승인</span><span class="nav-badge">3</span></a>
+      <a class="nav-item" href="completion.html" data-page="completion.html"><span>☑ 수료/장려금 시뮬레이션</span></a>
+      <a class="nav-item" href="students.html" data-page="students.html"><span>▤ 교육생 명부</span></a>
+      <a class="nav-item" href="settings.html" data-page="settings.html"><span>⚙ 규정 및 시스템 설정</span></a>
+    </nav>
+    <div class="sidebar-footer">행정 가이드라인<br>HRD-Net 연동 지침</div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="course-select">빅데이터 기반 AI 전문가 과정 4기 ▾</div>
+      <div class="room-tag"><span class="dot"></span>강의실: 제1스마트융합실</div>
+      <div class="topbar-right">
+        <button class="icon-btn" data-label="알림">🔔<span class="dot"></span></button>
+        <div class="profile">
+          <div class="profile-avatar">김</div>
+          <div><div class="profile-name">김담임 매니저</div><div class="profile-role">운영/담임 교강사</div></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="page-header">
+        <div>
+          <div class="page-title">수료/장려금 시뮬레이션</div>
+          <div class="page-sub">남은 출석 일수를 입력하면 수료 및 훈련장려금 지급 조건 충족 여부를 미리 계산합니다.</div>
+        </div>
+      </div>
+
+      <div class="main-grid">
+        <div class="card card-pad">
+          <div class="card-title">시뮬레이션 입력</div>
+          <div class="field">
+            <label>총 교육일수</label>
+            <input type="number" id="sim-total" value="120">
+          </div>
+          <div class="field">
+            <label>현재까지 출석일수</label>
+            <input type="number" id="sim-attended" value="67">
+          </div>
+          <div class="field">
+            <label>남은 교육일수 중 예상 결석일수</label>
+            <input type="number" id="sim-planned-absent" value="2">
+          </div>
+          <div class="field">
+            <label>수료 최소 출석률 기준 (%)</label>
+            <input type="number" id="sim-required" value="80">
+          </div>
+          <button class="btn btn-primary" id="sim-run" style="width:100%;">예상 결과 계산하기</button>
+        </div>
+
+        <div class="card card-pad">
+          <div class="card-title">예상 결과</div>
+          <div id="sim-result" style="margin-top:14px;font-size:13.5px;color:var(--text-sub);">
+            왼쪽 값을 입력하고 계산하기 버튼을 눌러주세요.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+  /* 이 페이지 전용 계산 스크립트입니다.
+     공통 기능은 js/script.js에 있고, 이 페이지만의 계산 로직은 여기 둡니다. */
+  document.getElementById("sim-run").addEventListener("click", function () {
+    const total = Number(document.getElementById("sim-total").value);
+    const attended = Number(document.getElementById("sim-attended").value);
+    const plannedAbsent = Number(document.getElementById("sim-planned-absent").value);
+    const required = Number(document.getElementById("sim-required").value);
+
+    const expectedFinalAttended = attended + (total - attended - plannedAbsent);
+    const finalRate = (expectedFinalAttended / total) * 100;
+    const roundedRate = Math.round(finalRate * 10) / 10;
+
+    const resultBox = document.getElementById("sim-result");
+    if (roundedRate >= required) {
+      resultBox.innerHTML =
+        '<div class="badge badge-green" style="font-size:13px;padding:6px 12px;">수료 기준 충족 예상</div>' +
+        '<p style="margin-top:12px;">예상 최종 출석률은 <b>' + roundedRate + '%</b>로, 기준(' + required + '%)을 충족할 것으로 예상됩니다.</p>';
+    } else {
+      resultBox.innerHTML =
+        '<div class="badge badge-red" style="font-size:13px;padding:6px 12px;">수료 기준 미달 위험</div>' +
+        '<p style="margin-top:12px;">예상 최종 출석률은 <b>' + roundedRate + '%</b>로, 기준(' + required + '%)에 못 미칠 수 있습니다. 담임 매니저 면담을 권장합니다.</p>';
+    }
+  });
+</script>
+</body>
+</html>

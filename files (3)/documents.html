@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>SMART HRD | 증빙서류 검토/승인</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">HRD</div>
+      <div><div class="brand-name">SMART HRD</div><div class="brand-sub">출결랭싱 동일포털</div></div>
+    </div>
+    <div class="nav-label">교육과정 관리</div>
+    <nav class="nav">
+      <a class="nav-item" href="index.html" data-page="index.html"><span>▦ 대시보드 홈</span></a>
+      <a class="nav-item" href="attendance.html" data-page="attendance.html"><span>☑ 출결 현황 모니터링</span></a>
+      <a class="nav-item" href="documents.html" data-page="documents.html"><span>☑ 증빙서류 검토/승인</span><span class="nav-badge">3</span></a>
+      <a class="nav-item" href="completion.html" data-page="completion.html"><span>☑ 수료/장려금 시뮬레이션</span></a>
+      <a class="nav-item" href="students.html" data-page="students.html"><span>▤ 교육생 명부</span></a>
+      <a class="nav-item" href="settings.html" data-page="settings.html"><span>⚙ 규정 및 시스템 설정</span></a>
+    </nav>
+    <div class="sidebar-footer">행정 가이드라인<br>HRD-Net 연동 지침</div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="course-select">빅데이터 기반 AI 전문가 과정 4기 ▾</div>
+      <div class="room-tag"><span class="dot"></span>강의실: 제1스마트융합실</div>
+      <div class="topbar-right">
+        <button class="icon-btn" data-label="알림">🔔<span class="dot"></span></button>
+        <button class="icon-btn" data-label="메시지">✉</button>
+        <div class="profile">
+          <div class="profile-avatar">김</div>
+          <div><div class="profile-name">김담임 매니저</div><div class="profile-role">운영/담임 교강사</div></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="page-header">
+        <div>
+          <div class="page-title">증빙서류 검토/승인</div>
+          <div class="page-sub">교육생이 제출한 증빙서류를 확인하고 승인 또는 반려 처리합니다.</div>
+        </div>
+      </div>
+
+      <div class="filter-bar">
+        <span class="chip active">검토 대기 3</span>
+        <span class="chip">승인 완료 21</span>
+        <span class="chip">반려 0</span>
+      </div>
+
+      <div class="card card-pad" style="max-width:640px;">
+        <div class="card-title">📄 검토 대기 서류</div>
+
+        <div class="doc-item">
+          <div class="doc-item-top"><span class="doc-name">김스마트</span><span class="badge badge-blue">병원진료 공결</span><span class="badge badge-amber doc-status" style="margin-left:auto;">당일 처리 권장</span></div>
+          <div class="doc-desc">진료확인서 (전남대병원 외래진료증, 1.4MB) · <a href="#">미리보기</a></div>
+          <div class="doc-actions">
+            <button class="btn btn-primary btn-sm doc-approve">승인 (공결 인정)</button>
+            <button class="btn btn-danger-outline btn-sm doc-reject">반려</button>
+          </div>
+        </div>
+
+        <div class="doc-item">
+          <div class="doc-item-top"><span class="doc-name">박인재</span><span class="badge badge-amber">예비군 훈련</span><span class="badge badge-red doc-status" style="margin-left:auto;">D-2 접수</span></div>
+          <div class="doc-desc">소집필증 및 훈련참가확인서 · <a href="#">미리보기</a></div>
+          <div class="doc-actions">
+            <button class="btn btn-primary btn-sm doc-approve">승인 (공결 인정)</button>
+            <button class="btn btn-danger-outline btn-sm doc-reject">반려</button>
+          </div>
+        </div>
+
+        <div class="doc-item">
+          <div class="doc-item-top"><span class="doc-name">박시현</span><span class="badge badge-blue">지각 사유서</span><span class="badge badge-amber doc-status" style="margin-left:auto;">검토 대기</span></div>
+          <div class="doc-desc">지하철 1호선 연착 확인 안내문 · <a href="#">미리보기</a></div>
+          <div class="doc-actions">
+            <button class="btn btn-primary btn-sm doc-approve">승인</button>
+            <button class="btn btn-danger-outline btn-sm doc-reject">반려</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

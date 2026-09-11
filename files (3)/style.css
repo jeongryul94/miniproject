@@ -1,0 +1,869 @@
+/* ==========================================================
+   SMART HRD 출결관리 대시보드 - 스타일시트
+   초보자를 위한 안내: 색상은 아래 :root 안의 변수만 바꾸면
+   전체 사이트 색상이 한 번에 바뀝니다.
+   ========================================================== */
+
+:root {
+  /* 메인 컬러 (블루 + 화이트 컨셉) */
+  --blue-900: #1e2a5e;
+  --blue-700: #2f4bd8;
+  --blue-600: #4f63e8;
+  --blue-500: #6c7ff0;
+  --blue-100: #e9ecfd;
+  --blue-50: #f4f6ff;
+
+  --green: #17a672;
+  --green-bg: #e5f8f0;
+  --amber: #e08a1f;
+  --amber-bg: #fdf3e2;
+  --red: #e0473f;
+  --red-bg: #fdeceb;
+
+  --text-main: #1c1f2a;
+  --text-sub: #6b7080;
+  --text-faint: #9aa0b1;
+
+  --bg-page: #f5f6fb;
+  --bg-card: #ffffff;
+  --border: #e7e9f2;
+
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+
+  --shadow-card: 0 1px 3px rgba(30, 42, 94, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  background: var(--bg-page);
+  color: var(--text-main);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ---------------- 전체 레이아웃 ---------------- */
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ---------------- 사이드바 ---------------- */
+
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background: var(--bg-card);
+  border-right: 1px solid var(--border);
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 8px 24px;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--blue-600);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.brand-sub {
+  font-size: 11px;
+  color: var(--text-sub);
+}
+
+.nav-label {
+  font-size: 11px;
+  color: var(--text-faint);
+  padding: 8px 12px 6px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  color: var(--text-sub);
+}
+
+.nav-item span.icon {
+  margin-right: 4px;
+}
+
+.nav-item:hover {
+  background: var(--blue-50);
+  color: var(--blue-700);
+}
+
+.nav-item.active {
+  background: var(--blue-600);
+  color: #fff;
+  font-weight: 600;
+}
+
+.nav-badge {
+  background: var(--red);
+  color: #fff;
+  font-size: 11px;
+  padding: 1px 7px;
+  border-radius: 999px;
+}
+
+.nav-item.active .nav-badge {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  background: var(--blue-50);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  font-size: 12px;
+  color: var(--blue-700);
+}
+
+/* ---------------- 상단바 ---------------- */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 28px;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  gap: 16px;
+}
+
+.course-select {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-page);
+}
+
+.room-tag {
+  font-size: 13px;
+  color: var(--text-sub);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.room-tag .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-left: auto;
+}
+
+.icon-btn {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn .dot {
+  position: absolute;
+  top: 6px;
+  right: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--blue-100);
+  color: var(--blue-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.profile-name {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.profile-role {
+  font-size: 11px;
+  color: var(--text-sub);
+}
+
+/* ---------------- 콘텐츠 영역 ---------------- */
+
+.content {
+  padding: 24px 28px 48px;
+  max-width: 1400px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.page-title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.page-sub {
+  font-size: 13px;
+  color: var(--text-sub);
+  margin-top: 4px;
+}
+
+.btn {
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 10px 16px;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--blue-600);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--blue-700);
+}
+
+.btn-outline {
+  background: #fff;
+  border: 1px solid var(--border);
+  color: var(--text-main);
+}
+
+.btn-outline:hover {
+  border-color: var(--blue-500);
+  color: var(--blue-700);
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 12.5px;
+  border-radius: var(--radius-sm);
+}
+
+.btn-danger-outline {
+  background: #fff;
+  border: 1px solid var(--red);
+  color: var(--red);
+}
+
+/* ---------------- 카드 공통 ---------------- */
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.card-pad {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ---------------- 대시보드: 과정 정보 바 ---------------- */
+
+.course-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+
+.course-banner-left .date-line {
+  font-size: 12.5px;
+  color: var(--text-sub);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.live-tag {
+  color: var(--blue-700);
+  font-weight: 600;
+}
+
+.course-banner-left h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.course-banner-left h1 .day {
+  color: var(--blue-600);
+}
+
+.course-banner-mid {
+  display: flex;
+  gap: 28px;
+}
+
+.metric-mini {
+  text-align: center;
+}
+
+.metric-mini .num {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.metric-mini .label {
+  font-size: 11px;
+  color: var(--text-sub);
+}
+
+/* ---------------- 대시보드: 4개 요약 카드 ---------------- */
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  padding: 18px 18px 16px;
+}
+
+.stat-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--text-sub);
+  margin-bottom: 12px;
+}
+
+.stat-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--blue-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-600);
+}
+
+.stat-value {
+  font-size: 26px;
+  font-weight: 700;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.stat-value .unit {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-sub);
+}
+
+.progress-track {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--blue-50);
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--blue-600);
+  border-radius: 999px;
+}
+
+.stat-foot {
+  font-size: 12px;
+  color: var(--text-sub);
+  display: flex;
+  gap: 10px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.badge-blue { background: var(--blue-100); color: var(--blue-700); }
+.badge-amber { background: var(--amber-bg); color: var(--amber); }
+.badge-green { background: var(--green-bg); color: var(--green); }
+.badge-red { background: var(--red-bg); color: var(--red); }
+
+/* ---------------- 메인 2단 레이아웃 ---------------- */
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* ---------------- 실시간 테이블 ---------------- */
+
+.table-tabs {
+  display: flex;
+  gap: 6px;
+  background: var(--blue-50);
+  padding: 4px;
+  border-radius: var(--radius-sm);
+}
+
+.table-tab {
+  border: none;
+  background: transparent;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 12.5px;
+  color: var(--text-sub);
+}
+
+.table-tab.active {
+  background: #fff;
+  color: var(--blue-700);
+  font-weight: 700;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+table.roster {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-top: 14px;
+}
+
+table.roster th {
+  text-align: left;
+  font-size: 11.5px;
+  color: var(--text-faint);
+  font-weight: 600;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+table.roster td {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+table.roster tr:last-child td {
+  border-bottom: none;
+}
+
+.trainee-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trainee-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--blue-100);
+  color: var(--blue-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 12.5px;
+  flex-shrink: 0;
+}
+
+.trainee-name {
+  font-weight: 600;
+}
+
+.trainee-track {
+  font-size: 11.5px;
+  color: var(--text-sub);
+}
+
+.status-pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.status-normal { background: var(--green-bg); color: var(--green); }
+.status-late { background: var(--amber-bg); color: var(--amber); }
+.status-absent { background: var(--red-bg); color: var(--red); }
+
+.mini-progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mini-progress .track {
+  width: 70px;
+  height: 5px;
+  border-radius: 999px;
+  background: var(--blue-50);
+  overflow: hidden;
+}
+
+.mini-progress .fill {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.row-action {
+  font-size: 12px;
+  color: var(--blue-700);
+  font-weight: 600;
+  background: none;
+  border: none;
+}
+
+.table-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  font-size: 12px;
+  color: var(--text-sub);
+}
+
+.pager {
+  display: flex;
+  gap: 6px;
+}
+
+.pager button {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: #fff;
+  font-size: 12px;
+}
+
+.pager button.active {
+  background: var(--blue-600);
+  color: #fff;
+  border-color: var(--blue-600);
+}
+
+/* ---------------- 타임라인 ---------------- */
+
+.timeline {
+  margin-top: 20px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline-item:last-child {
+  border-bottom: none;
+}
+
+.timeline-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.dot-amber { background: var(--amber); }
+.dot-blue { background: var(--blue-600); }
+.dot-red { background: var(--red); }
+
+.timeline-text .title {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.timeline-text .desc {
+  font-size: 12px;
+  color: var(--text-sub);
+  margin-top: 2px;
+}
+
+.timeline-time {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--text-faint);
+  white-space: nowrap;
+}
+
+/* ---------------- 우측 패널: 증빙서류 접수 ---------------- */
+
+.doc-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  margin-top: 12px;
+}
+
+.doc-item-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.doc-name {
+  font-weight: 700;
+  font-size: 13.5px;
+}
+
+.doc-desc {
+  font-size: 12px;
+  color: var(--text-sub);
+  margin-bottom: 10px;
+}
+
+.doc-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.doc-actions .btn {
+  flex: 1;
+}
+
+/* ---------------- 출석률 추이 (스파크라인) ---------------- */
+
+.sparkline-wrap {
+  margin-top: 10px;
+}
+
+.sparkline-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10.5px;
+  color: var(--text-faint);
+  margin-top: 6px;
+}
+
+/* ---------------- 알림 카드 ---------------- */
+
+.notice-card {
+  background: var(--blue-50);
+  border: none;
+}
+
+.notice-card p {
+  font-size: 12px;
+  color: var(--blue-700);
+  line-height: 1.6;
+  margin: 8px 0 0;
+}
+
+/* ---------------- 일반 페이지 카드 리스트 (하위 페이지 공용) ---------------- */
+
+.section-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #fff;
+  font-size: 12.5px;
+  color: var(--text-sub);
+}
+
+.chip.active {
+  background: var(--blue-600);
+  border-color: var(--blue-600);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ---------------- 로그인 페이지 ---------------- */
+
+.login-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, var(--blue-50), var(--bg-page));
+}
+
+.login-card {
+  width: 360px;
+  padding: 36px 32px;
+  text-align: center;
+}
+
+.login-card .brand-mark {
+  margin: 0 auto 12px;
+}
+
+.login-card h2 {
+  font-size: 18px;
+  margin: 4px 0 24px;
+}
+
+.field {
+  text-align: left;
+  margin-bottom: 14px;
+}
+
+.field label {
+  display: block;
+  font-size: 12.5px;
+  color: var(--text-sub);
+  margin-bottom: 6px;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  font-size: 13.5px;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: var(--blue-500);
+}
+
+.login-card .btn {
+  width: 100%;
+  margin-top: 8px;
+  padding: 11px;
+}
+
+.login-hint {
+  font-size: 11.5px;
+  color: var(--text-faint);
+  margin-top: 16px;
+}
+
+/* ---------------- 반응형 ---------------- */
+
+@media (max-width: 1100px) {
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .sidebar {
+    display: none;
+  }
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+}
