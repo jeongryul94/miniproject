@@ -117,7 +117,7 @@ function initLoginForm() {
   const form = document.getElementById("login-form");
   if (!form) return;
 
-  form.addEventListener("submit", async function (e) {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
     const id = document.getElementById("login-id").value;
     const pw = document.getElementById("login-pw").value;
@@ -128,21 +128,6 @@ function initLoginForm() {
     } else if (result === 2) {
       alert("비밀번호를 입력해 주세요.");
     } else {
-      if (typeof supabaseClient === "undefined") {
-        alert("Supabase 연결을 확인해 주세요.");
-        return;
-      }
-
-      const { error } = await supabaseClient.auth.signInWithPassword({
-        email: id,
-        password: pw
-      });
-
-      if (error) {
-        alert("로그인 실패: " + error.message);
-        return;
-      }
-
       alert("로그인 성공");
       window.location.href = "index.html";
     }
