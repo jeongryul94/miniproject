@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>SMART HRD | 과제 제출 현황</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">HRD</div>
+      <div>
+        <div class="brand-name">SMART HRD</div>
+        <div class="brand-sub">출결랭싱 동일포털</div>
+      </div>
+    </div>
+    <div class="nav-label">교육과정 관리</div>
+    <nav class="nav">
+      <a class="nav-item" href="index.html" data-page="index.html"><span>▦ 대시보드 홈</span></a>
+      <a class="nav-item" href="attendance.html" data-page="attendance.html"><span>☑ 출결 현황 모니터링</span></a>
+      <a class="nav-item" href="assignment.html" data-page="assignment.html"><span>☷ 과제 제출 현황</span></a>
+      <a class="nav-item" href="students.html" data-page="students.html"><span>▤ 교육생 명부</span></a>
+      <a class="nav-item" href="settings.html" data-page="settings.html"><span>⚙ 규정 및 시스템 설정</span></a>
+    </nav>
+    <div class="sidebar-footer">행정 가이드라인<br>HRD-Net 연동 지침</div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="course-select">빅데이터 기반 AI 전문가 과정 4기 ▾</div>
+      <div class="room-tag"><span class="dot"></span>강의실: 제1스마트융합실</div>
+      <div class="topbar-right">
+        <button class="icon-btn" data-label="알림">🔔<span class="dot"></span></button>
+        <div class="profile">
+          <div class="profile-avatar">김</div>
+          <div><div class="profile-name">김담임 매니저</div><div class="profile-role">운영/담임 교강사</div></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="page-header">
+        <div>
+          <div class="page-title">과제 제출 현황</div>
+          <div class="page-sub">과제별 제출 상태와 미제출 교육생을 실시간으로 확인합니다.</div>
+        </div>
+        <button class="btn btn-primary">＋ 새 과제 등록</button>
+      </div>
+
+      <div class="filter-bar">
+        <span class="chip active">전체 28명</span>
+        <span class="chip">제출 완료 22</span>
+        <span class="chip">미제출 6</span>
+        <span class="chip">지연 제출 2</span>
+      </div>
+
+      <div class="main-grid">
+        <div class="card card-pad">
+          <div class="card-title">Python 데이터 분석 미니 프로젝트 <span class="badge badge-amber" style="margin-left:auto;">오늘 18:00 마감</span></div>
+          <div class="stat-value" style="margin-top:18px;">22 <span class="unit">/ 28명 제출</span><span class="badge badge-blue" style="margin-left:auto;">78.6%</span></div>
+          <div class="progress-track"><div class="progress-fill" style="width:78.6%;"></div></div>
+          <div class="stat-foot"><span>미제출 6명</span><span>지연 제출 2명</span><span>최근 제출 5분 전</span></div>
+        </div>
+
+        <div class="card card-pad">
+          <div class="card-title">제출 현황 요약</div>
+          <div class="stat-foot" style="margin-top:18px;justify-content:space-between;"><span>제출 완료</span><strong style="color:var(--green);">22명</strong></div>
+          <div class="stat-foot" style="margin-top:10px;justify-content:space-between;"><span>검토 대기</span><strong style="color:var(--amber);">8건</strong></div>
+          <div class="stat-foot" style="margin-top:10px;justify-content:space-between;"><span>미제출</span><strong style="color:var(--red);">6명</strong></div>
+        </div>
+      </div>
+
+      <div class="card card-pad" style="margin-top:20px;">
+        <div class="card-title">교육생별 제출 상태 <span style="color:var(--text-faint);font-weight:400;font-size:12px;">마지막 동기화 1분 전</span></div>
+        <table class="roster">
+          <thead>
+            <tr><th>교육생 정보</th><th>담당 파트</th><th>제출 시간</th><th>상태</th><th>피드백</th><th></th></tr>
+          </thead>
+          <tbody>
+            <tr><td><div class="trainee-cell"><div class="trainee-avatar">강</div><div><div class="trainee-name">강민준</div><div class="trainee-track">AI 모델링 파트</div></div></div></td><td>모델 성능 분석</td><td>16:42</td><td><span class="badge badge-green">제출 완료</span></td><td>검토 대기</td><td><button class="row-action">상세</button></td></tr>
+            <tr><td><div class="trainee-cell"><div class="trainee-avatar">박</div><div><div class="trainee-name">박시현</div><div class="trainee-track">관리 대상자</div></div></div></td><td>데이터 전처리</td><td>17:35</td><td><span class="badge badge-amber">지연 제출</span></td><td>검토 대기</td><td><button class="row-action">상세</button></td></tr>
+            <tr><td><div class="trainee-cell"><div class="trainee-avatar">김</div><div><div class="trainee-name">김스마트</div><div class="trainee-track">자연어처리 파트</div></div></div></td><td>텍스트 분류</td><td>15:08</td><td><span class="badge badge-green">제출 완료</span></td><td>검토 완료</td><td><button class="row-action">상세</button></td></tr>
+            <tr><td><div class="trainee-cell"><div class="trainee-avatar">정</div><div><div class="trainee-name">정재우</div><div class="trainee-track">수료위험군</div></div></div></td><td>모델 성능 분석</td><td>-</td><td><span class="badge badge-red">미제출</span></td><td>알림 발송 필요</td><td><button class="row-action">상세</button></td></tr>
+            <tr><td><div class="trainee-cell"><div class="trainee-avatar">이</div><div><div class="trainee-name">이데이터</div><div class="trainee-track">빅데이터 엔지니어링</div></div></div></td><td>데이터 파이프라인</td><td>14:26</td><td><span class="badge badge-green">제출 완료</span></td><td>검토 완료</td><td><button class="row-action">상세</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
